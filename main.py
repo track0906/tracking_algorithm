@@ -344,13 +344,17 @@ class Const_goal():# goal作成プログラム
         self.traj_g_y = []
 
     def calc_goal(self, time_step): # 本当は人の値が入ってもよいかも
-        if time_step <= 100:
+        if time_step <= 50:
+        # if time_step <= 100:
             g_x  = 10.0
             g_y = 10.0
-        else:
+        elif time_step <= 100:
             g_x = -10.0
             g_y = -10.0
-
+        else:
+            g_x = 0
+            g_y = -10.0
+        
         self.traj_g_x.append(g_x)
         self.traj_g_y.append(g_y)
 
@@ -373,8 +377,7 @@ class Main_controller():# Mainの制御クラス
 
             self.obstacles.append(Obstacle(x, y, size))
         '''
-
-        self.obstacles =[Obstacle(4, 1, 0.25), Obstacle(0, 4.5, 0.25),  Obstacle(3, 4.5, 0.25), Obstacle(5, 3.5, 0.25),  Obstacle(7.5, 9.0, 0.25)]
+        self.obstacles =[Obstacle(4, 1, 0.25), Obstacle(0, 4.5, 0.25),  Obstacle(3, 4.5, 0.25), Obstacle(5, 3.5, 0.25),  Obstacle(7.5, 9.0, 0.25), Obstacle(6, 8, 0.5)]
 
         # ここを変えたら他もチェック
         self.samplingtime = 0.1
