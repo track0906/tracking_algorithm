@@ -377,7 +377,8 @@ class Main_controller():# Mainの制御クラス
 
             self.obstacles.append(Obstacle(x, y, size))
         '''
-        self.obstacles =[Obstacle(4, 1, 0.25), Obstacle(0, 4.5, 0.25),  Obstacle(3, 4.5, 0.25), Obstacle(5, 3.5, 0.25),  Obstacle(7.5, 9.0, 0.25), Obstacle(6, 8, 0.5)]
+        self.obstacles =[Obstacle(4, 1, 0.25)]
+        # self.obstacles =[Obstacle(4, 1, 0.25), Obstacle(0, 4.5, 0.25),  Obstacle(3, 4.5, 0.25), Obstacle(5, 3.5, 0.25),  Obstacle(7.5, 9.0, 0.25), Obstacle(6, 8, 0.5)]
 
         # ここを変えたら他もチェック
         self.samplingtime = 0.1
