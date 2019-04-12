@@ -1,7 +1,6 @@
 # controller
 import numpy as np
 np.seterr(divide='ignore', invalid='ignore')
-
 import matplotlib.pyplot as plt
 import pandas as pd
 from animation import Animation_robot
