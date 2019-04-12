@@ -121,7 +121,7 @@ class Animation_robot():
         shuold_save_animation = int(input())
 
         if shuold_save_animation: 
-            animation.save('basic_animation.mp4', writer="ffmpeg")
+            animation.save('dest/basic_animation.mp4', writer="ffmpeg")
             # animation.save('basic_animation.gif', writer='imagemagick')
 
         plt.show()
