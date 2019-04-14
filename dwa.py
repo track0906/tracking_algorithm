@@ -200,10 +200,11 @@ class DWA():
         nearest_obs = [] # あるエリアに入ってる障害物
 
         for obs in obstacles:
-            temp_dis_to_obs = math.sqrt((state.x - obs.x) ** 2 + (state.y - obs.y) ** 2)
+            #obs[-1] .. 現在の障害物の位置
+            temp_dis_to_obs = math.sqrt((state.x - obs.traj_obs[-1].x) ** 2 + (state.y - obs.traj_obs[-1].y) ** 2)
 
             if temp_dis_to_obs < area_dis_to_obs :
-                nearest_obs.append(obs)
+                nearest_obs.append(obs.traj_obs[-1])
 
         return nearest_obs
 

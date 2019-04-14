@@ -37,6 +37,7 @@ class Obstacle_anim():
         angle = 0.0
         circle_x, circle_y, circle_line_x, circle_line_y = \
                 write_circle(obstacle.x, obstacle.y, angle, circle_size=obstacle.size)
+                ## circle_x .. list 
 
         self.obs_img.set_data(circle_x, circle_y)
 
@@ -161,7 +162,7 @@ class Animation_robot():
 
         # obstacles
         for k in range(self.obstacles_num):
-            self.obs_imgs.append(self.obs[k].set_graph_data(self.obstacles[k]))      
+            self.obs_imgs.append(self.obs[k].set_graph_data(self.obstacles[k].traj_obs[i]))   
 
         self.step_text.set_text('step = {0}'.format(i))
 

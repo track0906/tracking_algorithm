@@ -1,5 +1,4 @@
 import math
-
 # path
 class Path():
     def __init__(self, u_th, u_v): 
@@ -8,12 +7,6 @@ class Path():
         self.th = None
         self.u_v = u_v
         self.u_th = u_th
-
-class Obstacle():
-    def __init__(self, x, y, size):
-        self.x = x
-        self.y = y
-        self.size = size
 
 class Two_wheeled_robot(): # 実際のロボット
     def __init__(self, init_x, init_y, init_th):
@@ -72,3 +65,24 @@ class Const_goal():# goal作成プログラム
         self.traj_g_y.append(g_y)
 
         return g_x, g_y
+
+class Obstacle():
+    def __init__(self, x, y, size):
+        self.x = x
+        self.y = y
+        self.size = size
+
+class Const_obs(): #１つの障害物のデータを時系列で保存
+    def __init__(self):
+        self.traj_obs = []
+
+    def set_info(self, x, y, size):
+        self.traj_obs.append(Obstacle(x, y, size))
+
+
+    
+            
+        
+        
+    
+        
